@@ -1,0 +1,8 @@
+
+kevin_platform_view:
+    path:      /advert/{id}
+    defaults:
+        _controller: AppBundle:ArticleAction
+    requirements:
+        id: \d+
+

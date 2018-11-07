@@ -1,0 +1,48 @@
+{% extends "PagePrincipale/index.html.twig" %}
+        
+{% block kevinplatform_body %}        
+<section id="content_area">
+    <div class="clearfix wrapper main_content_area">
+    
+        <div class="clearfix main_content floatleft">    
+
+            <div class="clearfix content">
+                <div class="content_title">
+                <h2>Latest Blog Post</h2></div> 
+                <div class="clearfix single_content">
+                    <div class="clearfix post_date floatleft">
+                        <div class="date">
+                            <h3>27</h3>
+                            <p>January</p>
+                        </div>
+                    </div>
+                    <div class="clearfix post_detail">
+                        <h2><a href=""> {{ BlogPost.title }} </a></h2>
+                        <div class="clearfix post-meta">
+                            <p><span><i class="fa fa-user"></i> Admin</span> <span><i class="fa fa-clock-o"></i> 20 Jan 2014</span> <span><i class="fa fa-comment"></i> 4 comments</span> <span><i class="fa fa-folder"></i> {{ BlogPost.category.name }}</span></p>
+                        </div>
+                        <div class="clearfix post_excerpt">
+                            <img src="images/thumb.png" alt=""/>
+                            <p>{{ BlogPost.body }} </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="clearfix sidebar_container floatright">
+            <div class="clearfix sidebar">
+                <div class="clearfix single_sidebar">
+                    <h2>Categories</h2>
+                     {% for item in Categorie %}  
+                    <ul>
+                        <li><a href="">{{ item.name }}</a></li>
+                    </ul>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        
+{% endblock %}    
